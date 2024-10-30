@@ -1,19 +1,16 @@
-const express = require('express');
-const path = require('path');
-const authenticateToken = require('../middlewares/authenticateToken');
-const {
-    login,
-    logOut,
-    signUp} = require('../controllers/users');
+const express = require('express')
 
 
-const router = express.Router();
+const {addUser, getAllUsers} = require('../controllers/user')
+const {addCompany, showAll} = require('../controllers/company')
 
 
-// login, signup and logout
-router.route('/login').post(login);
-router.route('/signup').post(signUp);
-router.route('/logout').post(logOut);
+const router = express.Router()
 
+
+router.route('/addUser').post(addUser)
+router.route('/allUsers').get(getAllUsers)
+router.route('/addCompany').post(addCompany)
+router.route('/allCompanies').get(showAll)
 
 module.exports = router;
