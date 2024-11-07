@@ -8,7 +8,6 @@ const {addCompany, showAll} = require('../controllers/company')
 const router = express.Router()
 
 
-
 router.route('/allUsers').get(getAllUsers)
 router.route('/allCompanies').get(showAll)
 
