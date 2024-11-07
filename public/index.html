@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Job Portal System</h1>
+    </header>
+
+    <!-- Job Listings -->
+    <section class="container my-4">
+        <h2>Available Jobs</h2>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <input type="text" class="form-control" id="keyword" placeholder="Search by keyword">
+            </div>
+            <div class="col-md-4">
+                <select class="form-control" id="jobType">
+                    <option value="">Select Job Type</option>
+                    <option value="Full-time">Full-time</option>
+                    <option value="Part-time">Part-time</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary btn-block" onclick="filterJobs()">Search</button>
+            </div>
+        </div>
+
+        <div id="job-listings" class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Software Engineer</h5>
+                        <p class="card-text">Location: New York</p>
+                        <p class="card-text">Type: Full-time</p>
+                        <button class="btn btn-primary" onclick="applyJob('Software Engineer')">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Data Analyst</h5>
+                        <p class="card-text">Location: San Francisco</p>
+                        <p class="card-text">Type: Part-time</p>
+                        <button class="btn btn-primary" onclick="applyJob('Data Analyst')">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Product Manager</h5>
+                        <p class="card-text">Location: Remote</p>
+                        <p class="card-text">Type: Full-time</p>
+                        <button class="btn btn-primary" onclick="applyJob('Product Manager')">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Web Developer</h5>
+                        <p class="card-text">Location: Los Angeles</p>
+                        <p class="card-text">Type: Full-time</p>
+                        <button class="btn btn-primary" onclick="applyJob('Web Developer')">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">UX Designer</h5>
+                        <p class="card-text">Location: Seattle</p>
+                        <p class="card-text">Type: Part-time</p>
+                        <button class="btn btn-primary" onclick="applyJob('UX Designer')">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">DevOps Engineer</h5>
+                        <p class="card-text">Location: Austin</p>
+                        <p class="card-text">Type: Full-time</p>
+                        <button class="btn btn-primary" onclick="applyJob('DevOps Engineer')">Apply Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
